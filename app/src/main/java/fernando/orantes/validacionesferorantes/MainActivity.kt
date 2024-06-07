@@ -53,6 +53,11 @@ class MainActivity : AppCompatActivity() {
                         if (txtPassword.text.length < 6 || txtPassword.text.matches("[0-9]+".toRegex())){
                             Toast.makeText(this, "The password must contain more than 6 digits", Toast.LENGTH_SHORT).show()
                         }
+                        else{
+                            if(!txtDUI.text.matches("[0-9]+-[0-9]".toRegex())) {
+                                Toast.makeText(this, "Ingrese un DUI valido", Toast.LENGTH_SHORT).show()
+                            }
+                        }
                     }
                 }
             }
