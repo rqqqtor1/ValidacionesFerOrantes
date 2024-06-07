@@ -7,4 +7,11 @@
     android:layout_height="match_parent"
     tools:context=".splashscreen">
 
+    <ImageView
+        android:id="@+id/imgdiezmay"
+        android:layout_width="407dp"
+        android:layout_height="315dp"
+        app:srcCompat="@drawable/liceodiezmayo"
+        tools:layout_editor_absoluteX="-12dp"
+        tools:layout_editor_absoluteY="195dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
