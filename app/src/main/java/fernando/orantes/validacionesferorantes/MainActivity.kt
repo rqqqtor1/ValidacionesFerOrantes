@@ -44,20 +44,18 @@ class MainActivity : AppCompatActivity() {
                 if (!txtEdad.text.matches("[0-9]+".toRegex())) {
                     Toast.makeText(this, "Enter numbers", Toast.LENGTH_SHORT).show()
 
-                }
-
-                else {
+                } else {
                     //Validar el correo
-                    if (!txtEmail.text.matches("[a-zA-Z0-9.-_]+@[a-z]+\\.[a-z]".toRegex()))
-                        Toast.makeText( this, "Enter valid email", Toast.LENGTH_SHORT).show()
+                    if (!txtEmail.text.matches("[a-zA-Z0-9.-_]+@[a-z]+\\.[a-z]".toRegex())) {
+                        Toast.makeText(this, "Enter valid email", Toast.LENGTH_SHORT).show()
+                    } else{
+                        //Validar las contraseñas
+                        if (txtPassword.text.length < 6 || txtPassword.text.matches("[0-9]+".toRegex())){
+                            Toast.makeText(this, "The password must contain more than 6 digits", Toast.LENGTH_SHORT).show()
+                        }
+                    }
                 }
-
-
-
-
             }
-
-
         }
     }
 }
